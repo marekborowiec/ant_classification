@@ -1,0 +1,1 @@
+This is a repository for an up-to-date ant classification down to subgenus level. The classification file was created using the `antwiki_taxonomy_scraper.py` script and subsequently manually curated.
