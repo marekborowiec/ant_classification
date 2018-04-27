@@ -76,14 +76,14 @@ with open('classification.md', 'w') as file:
     wiki = 'http://www.antwiki.org/wiki/'
     for subfamily in sorted(taxonomy):
         pad = '&nbsp;'
-        file.write(f'**Subfamily** [**{subfamily}**]({wiki}{subfamily})\n')
+        file.write(f'**Subfamily** [**{subfamily}**]({wiki}{subfamily})<br/>\n')
         for tribe in sorted(taxonomy[subfamily]):
             if tribe:
-                file.write(f'{pad * 6} **Tribe** [**{tribe}**]({wiki}{tribe})\n')
+                file.write(f'{pad * 6} **Tribe** [**{tribe}**]({wiki}{tribe})<br/>\n')
             for genus in sorted(taxonomy[subfamily][tribe]):
-                file.write(f'{pad * 12} Genus [*{genus}*]({wiki}{genus})\n')
+                file.write(f'{pad * 12} Genus [*{genus}*]({wiki}{genus})<br/>\n')
                 for synonyms in taxonomy[subfamily][tribe][genus]:
                     if synonyms:
                         syn_list = sorted(synonyms.split('@'))
                         for syn in syn_list:
-                            file.write(f'{pad * 20} = [{syn}]({wiki}{syn})\n')
+                            file.write(f'{pad * 20} = [{syn}]({wiki}{syn})<br/>\n')
