@@ -1,7 +1,7 @@
 # Genus-level classification of the Formicidae
 This page was created using data from [www.AntWiki.org](http://www.antwiki.org/) as of 27 April 2018. It shows current classification of all ant subfamilies, tribes, genera and subgenera. Current synonyms are indicated by equals sign. 
 
-Last modified 29 April 2019.
+Last modified 29 April 2018.
 
 **Subfamily** [**Agroecomyrmecinae**](http://www.antwiki.org/wiki/Agroecomyrmecinae)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Genus [*Ankylomyrma*](http://www.antwiki.org/wiki/Ankylomyrma)<br/>
