@@ -33,7 +33,11 @@ def get_classification(page_url):
     try:
         genus = page_soup.find(attrs = {'class': 'genus'}).i.b.text
         print(f'Fetching data for genus {genus}...')
+        txt = page_soup.get_text()
+        if re.search(r'Invalid genus', txt):
+            print(f'Warning: genus {genus} may no longer be valid')
     except (AttributeError, TypeError) as e:
+        print(f'Error: genus not found for URL {page_url} {e}')
         genus = None
     try:
         # this will also include valid subgenera
