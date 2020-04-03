@@ -28,18 +28,18 @@ def get_classification(page_url):
     subfamily = page_soup.find(attrs = {'class': 'subfamily'}).find('a')['title']
     try:
         tribe = page_soup.find(attrs = {'class': 'tribe'}).find('a')['title']
-    except AttributeError:
+    except (AttributeError, TypeError) as e:
         tribe = None
     try:
         genus = page_soup.find(attrs = {'class': 'genus'}).i.b.text
         print(f'Fetching data for genus {genus}...')
-    except AttributeError:
+    except (AttributeError, TypeError) as e:
         genus = None
     try:
         # this will also include valid subgenera
         synonyms = page_soup.find(attrs = {'style': 'text-align: left'}).find_all('i')
         parsed_syns = [synonym_tag.text for synonym_tag in synonyms]
-    except AttributeError:
+    except (AttributeError, TypeError) as e:
         parsed_syns = ''
     if genus:
         if tribe:
@@ -66,7 +66,7 @@ with open(genera_url) as f:
     urls = f.read().splitlines()
 
 # use multiprocessing to get HTML from the URLs
-pool = mp.Pool(24) 
+pool = mp.Pool(2) 
 classifications = pool.map(get_classification, urls)
 
 [process_classification(classification, taxonomy) for classification in classifications]
