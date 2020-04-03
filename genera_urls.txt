@@ -331,3 +331,6 @@ http://www.antwiki.org/wiki/Proceratium
 http://www.antwiki.org/wiki/Myrcidris
 http://www.antwiki.org/wiki/Pseudomyrmex
 http://www.antwiki.org/wiki/Tetraponera
+http://antwiki.org/wiki/Xerolitor
+http://antwiki.org/wiki/Mycetomoellerius
+http://antwiki.org/wiki/Paratrachymyrmex
