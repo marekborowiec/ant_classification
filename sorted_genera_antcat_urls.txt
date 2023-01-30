@@ -10,6 +10,7 @@ http://www.antwiki.org/wiki/Adlerzia
 http://www.antwiki.org/wiki/Aenictogiton
 http://www.antwiki.org/wiki/Aenictus
 http://www.antwiki.org/wiki/Agraulomyrmex
+http://www.antwiki.org/wiki/Alfaria
 http://www.antwiki.org/wiki/Alloformica
 http://www.antwiki.org/wiki/Allomerus
 http://www.antwiki.org/wiki/Amblyopone
@@ -42,6 +43,7 @@ http://www.antwiki.org/wiki/Bajcaridris
 http://www.antwiki.org/wiki/Baracidris
 http://www.antwiki.org/wiki/Bariamyrma
 http://www.antwiki.org/wiki/Basiceros
+http://www.antwiki.org/wiki/Bazboltonia
 http://www.antwiki.org/wiki/Belonopelta
 http://www.antwiki.org/wiki/Blepharidatta
 http://www.antwiki.org/wiki/Boloponera
@@ -132,6 +134,7 @@ http://www.antwiki.org/wiki/Huberia
 http://www.antwiki.org/wiki/Hylomyrma
 http://www.antwiki.org/wiki/Hypoponera
 http://www.antwiki.org/wiki/Iberoformica
+http://www.antwiki.org/wiki/Igaponera
 http://www.antwiki.org/wiki/Indomyrma
 http://www.antwiki.org/wiki/Iridomyrmex
 http://www.antwiki.org/wiki/Iroponera
@@ -173,6 +176,7 @@ http://www.antwiki.org/wiki/Meranoplus
 http://www.antwiki.org/wiki/Mesoponera
 http://www.antwiki.org/wiki/Mesostruma
 http://www.antwiki.org/wiki/Messor
+http://www.antwiki.org/wiki/Metalasius
 http://www.antwiki.org/wiki/Metapone
 http://www.antwiki.org/wiki/Microdaceton
 http://www.antwiki.org/wiki/Monomorium
@@ -239,7 +243,6 @@ http://www.antwiki.org/wiki/Perissomyrmex
 http://www.antwiki.org/wiki/Peronomyrmex
 http://www.antwiki.org/wiki/Petalomyrmex
 http://www.antwiki.org/wiki/Phalacromyrmex
-http://www.antwiki.org/wiki/Phaulomyrma
 http://www.antwiki.org/wiki/Pheidole
 http://www.antwiki.org/wiki/Philidris
 http://www.antwiki.org/wiki/Phrynoponera
@@ -296,6 +299,7 @@ http://www.antwiki.org/wiki/Sphinctomyrmex
 http://www.antwiki.org/wiki/Stegomyrmex
 http://www.antwiki.org/wiki/Stenamma
 http://www.antwiki.org/wiki/Stereomyrmex
+http://www.antwiki.org/wiki/Stictoponera
 http://www.antwiki.org/wiki/Stigmacros
 http://www.antwiki.org/wiki/Stigmatomma
 http://www.antwiki.org/wiki/Streblognathus
