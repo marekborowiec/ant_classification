@@ -25,41 +25,67 @@ def tree():
 
 def get_classification(page_url):
     """Find names of subfamily, tribe and genus on genus page."""
-    # Seems like these are contained within classes
-    # subfamily and tribe under <a title>
-    # and genus is found under genus class under <i><b>
-    html = request.urlopen(page_url)
-    page_soup = BeautifulSoup(html, 'html.parser')
-    subfamily = page_soup.find(attrs = {'class': 'subfamily'}).find('a')['title']
     try:
-        tribe = page_soup.find(attrs = {'class': 'tribe'}).find('a')['title']
-    except (AttributeError, TypeError) as e:
-        tribe = None
+        html = request.urlopen(page_url)
+        page_soup = BeautifulSoup(html, 'html.parser')
+    except Exception as e:
+        print(f"Error fetching URL {page_url}: {e}")
+        return None
+    
+    subfamily_tag = page_soup.find(attrs={'class': 'subfamily'})
+    if subfamily_tag is None:
+        print(f"Warning: 'subfamily' not found in {page_url}")
+        return None
+    subfamily_link = subfamily_tag.find('a')
+    if subfamily_link is None:
+        print(f"Warning: subfamily link not found in {page_url}")
+        return None
+    subfamily = subfamily_link.get('title', None)
+    
+    tribe_tag = page_soup.find(attrs={'class': 'tribe'})
+    tribe = None
+    if tribe_tag:
+        tribe_link = tribe_tag.find('a')
+        if tribe_link:
+            tribe = tribe_link.get('title', None)
+    
+    genus = None
+    species_no = None
     try:
-        genus = page_soup.find(attrs = {'class': 'genus'}).i.b.text
-        species_no = page_soup.find(attrs = {'title': f'Category:{genus} species'}).text
-        print(f'Fetching data for genus {genus}...')
-        txt = page_soup.get_text()
-        if re.search(r'Invalid genus', txt):
-            print(f'Warning: genus {genus} may no longer be valid')
-    except (AttributeError, TypeError) as e:
-        print(f'Error: genus not found for URL {page_url} {e}')
-        genus = None
-    try:
-        # this will also include valid subgenera
-        synonyms = page_soup.find(attrs = {'style': 'text-align: left'}).find_all('i')
-        parsed_syns = [synonym_tag.text for synonym_tag in synonyms]
-    except (AttributeError, TypeError) as e:
-        parsed_syns = ''
-    if genus:
-        genus_tpl = (genus, species_no)
-        if tribe:
-            return (subfamily, tribe, genus_tpl, parsed_syns)
+        genus_tag = page_soup.find(attrs={'class': 'genus'})
+        if genus_tag and genus_tag.i and genus_tag.i.b:
+            genus = genus_tag.i.b.text
         else:
-            tribe = ''
-            return (subfamily, tribe, genus_tpl, parsed_syns)
+            print(f"Warning: genus tag or sub-elements missing in {page_url}")
+        
+        if genus:
+            species_tag = page_soup.find(attrs={'title': f'Category:{genus} species'})
+            if species_tag:
+                species_no = species_tag.text
+            else:
+                print(f"Warning: species count tag missing for genus {genus} in {page_url}")
+
+            print(f'Fetching data for genus {genus}...')
+            txt = page_soup.get_text()
+            if re.search(r'Invalid genus', txt):
+                print(f'Warning: genus {genus} may no longer be valid')
+    except Exception as e:
+        print(f"Error processing genus data in {page_url}: {e}")
+    
+    synonyms = []
+    try:
+        synonym_container = page_soup.find(attrs={'style': 'text-align: left'})
+        if synonym_container:
+            synonyms = [syn.text for syn in synonym_container.find_all('i')]
+    except Exception as e:
+        print(f"Error fetching synonyms in {page_url}: {e}")
+    
+    if genus:
+        genus_tpl = (genus, species_no if species_no else "")
+        return (subfamily, tribe if tribe else "", genus_tpl, synonyms)
     else:
-        print(f'No genus name was found in {page_url}. Perhaps this is a subgenus?')
+        print(f'No genus name was found in {page_url}. Perhaps this is a subgenus or page format changed?')
+        return None
 
 def add_classification(taxonomy, clas):
     """Add classification to existing taxonomy tree"""
@@ -80,6 +106,9 @@ with open(genera_url) as f:
 pool = mp.Pool(2) 
 classifications = pool.map(get_classification, urls)
 
+# Filter out None results
+classifications = [c for c in classifications if c is not None]
+
 [process_classification(classification, taxonomy) for classification in classifications]
 
 with open('species-table.txt', 'w') as tf:
@@ -88,6 +117,18 @@ with open('species-table.txt', 'w') as tf:
             for genus_tpl in sorted(taxonomy[subfamily][tribe]):
                 genus_name, species_no = genus_tpl
                 tf.write(f'{genus_name}\t{species_no}\n')
+
+with open('species-table-no-tribes.txt', 'w') as tf:
+    for subfamily in sorted(taxonomy):
+        genera_by_subfamily = []
+        for tribe in sorted(taxonomy[subfamily]):
+            for genus_tpl in sorted(taxonomy[subfamily][tribe]):
+                genus_name, species_no = genus_tpl
+                genera_by_subfamily.append(genus_tpl)
+        genera_by_subfamily.sort()
+        for genus_tpl in genera_by_subfamily:
+            genus_name, species_no = genus_tpl
+            tf.write(f'{genus_name}\t{species_no}\n')
 
 # write appropriately formatted results to a file
 with open('classification.md', 'w') as file:
