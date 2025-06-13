@@ -21,7 +21,6 @@ http://www.antwiki.org/wiki/Anillidris
 http://www.antwiki.org/wiki/Anillomyrma
 http://www.antwiki.org/wiki/Ankylomyrma
 http://www.antwiki.org/wiki/Anochetus
-http://www.antwiki.org/wiki/Anomalomyrma
 http://www.antwiki.org/wiki/Anonychomyrma
 http://www.antwiki.org/wiki/Anoplolepis
 http://www.antwiki.org/wiki/Aphaenogaster
@@ -72,6 +71,7 @@ http://www.antwiki.org/wiki/Chrysapace
 http://www.antwiki.org/wiki/Cladomyrma
 http://www.antwiki.org/wiki/Colobopsis
 http://www.antwiki.org/wiki/Colobostruma
+http://www.antwiki.org/wiki/Corrieopone
 http://www.antwiki.org/wiki/Crematogaster
 http://www.antwiki.org/wiki/Cryptomyrmex
 http://www.antwiki.org/wiki/Cryptopone
@@ -83,7 +83,7 @@ http://www.antwiki.org/wiki/Dacatria
 http://www.antwiki.org/wiki/Dacetinops
 http://www.antwiki.org/wiki/Daceton
 http://www.antwiki.org/wiki/Diacamma
-http://www.antwiki.org/wiki/Tyrannomyrmex
+http://www.antwiki.org/wiki/Diaphoromyrma
 http://www.antwiki.org/wiki/Dicroaspis
 http://www.antwiki.org/wiki/Dilobocondyla
 http://www.antwiki.org/wiki/Dinomyrmex
@@ -130,6 +130,7 @@ http://www.antwiki.org/wiki/Hagensia
 http://www.antwiki.org/wiki/Harpagoxenus
 http://www.antwiki.org/wiki/Harpegnathos
 http://www.antwiki.org/wiki/Heteroponera
+http://www.antwiki.org/wiki/Holcoponera
 http://www.antwiki.org/wiki/Huberia
 http://www.antwiki.org/wiki/Hylomyrma
 http://www.antwiki.org/wiki/Hypoponera
@@ -205,7 +206,6 @@ http://www.antwiki.org/wiki/Neocerapachys
 http://www.antwiki.org/wiki/Neoponera
 http://www.antwiki.org/wiki/Nesomyrmex
 http://www.antwiki.org/wiki/Nomamyrmex
-http://www.antwiki.org/wiki/Noonilla
 http://www.antwiki.org/wiki/Nothomyrmecia
 http://www.antwiki.org/wiki/Notoncus
 http://www.antwiki.org/wiki/Notostigma
@@ -256,6 +256,7 @@ http://www.antwiki.org/wiki/Pogonomyrmex
 http://www.antwiki.org/wiki/Polyergus
 http://www.antwiki.org/wiki/Polyrhachis
 http://www.antwiki.org/wiki/Ponera
+http://www.antwiki.org/wiki/Poneracantha
 http://www.antwiki.org/wiki/Prenolepis
 http://www.antwiki.org/wiki/Prionopelta
 http://www.antwiki.org/wiki/Pristomyrmex
@@ -289,7 +290,6 @@ http://www.antwiki.org/wiki/Rostromyrmex
 http://www.antwiki.org/wiki/Rotastruma
 http://www.antwiki.org/wiki/Royidris
 http://www.antwiki.org/wiki/Santschiella
-http://www.antwiki.org/wiki/Scyphodon
 http://www.antwiki.org/wiki/Secostruma
 http://www.antwiki.org/wiki/Sericomyrmex
 http://www.antwiki.org/wiki/Simopelta
@@ -326,17 +326,18 @@ http://www.antwiki.org/wiki/Trichomyrmex
 http://www.antwiki.org/wiki/Tropidomyrmex
 http://www.antwiki.org/wiki/Turneria
 http://www.antwiki.org/wiki/Typhlomyrmex
-http://www.antwiki.org/wiki/Diaphoromyrma
+http://www.antwiki.org/wiki/Tyrannomyrmex
+http://www.antwiki.org/wiki/Unicumyrmex
 http://www.antwiki.org/wiki/Veromessor
 http://www.antwiki.org/wiki/Vicinopone
 http://www.antwiki.org/wiki/Vitsika
 http://www.antwiki.org/wiki/Vollenhovia
 http://www.antwiki.org/wiki/Vombisidris
+http://www.antwiki.org/wiki/Wadeura
 http://www.antwiki.org/wiki/Wasmannia
 http://www.antwiki.org/wiki/Xenomyrmex
 http://www.antwiki.org/wiki/Xerolitor
 http://www.antwiki.org/wiki/Xymmer
-http://www.antwiki.org/wiki/Yavnella
 http://www.antwiki.org/wiki/Yunodorylus
 http://www.antwiki.org/wiki/Zasphinctus
 http://www.antwiki.org/wiki/Zatania
